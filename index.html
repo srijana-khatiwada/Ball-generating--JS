@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <button id="btn">Click me</button>
+      <div id="container">  
+        </div>
+        <!-- -----script---- -->
+    <script>
+        const btn = document.getElementById('btn');
+        const container = document.getElementById('container');
+        const height = container.clientHeight;
+        const width = container.clientWidth;
+        console.log(width,height);
+        
+        btn.onclick = function(e){
+        var ball = document.createElement('div');
+        ball.classList.add('newBall');
+        ball.style.left = Math.random() * ( width-21) + 'px';
+        ball.style.top  = Math.random() *  (height-21) + 'px';
+        console.log(ball.style.left, ball.style.top);
+        container.appendChild(ball);
+    };
+
+    </script>
+</body>
+</html>
